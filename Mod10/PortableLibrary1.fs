@@ -5,7 +5,11 @@ module private Helper =
     open System
     open System.Globalization
 
-    let charToInt (x:char) = 
+    let isNumeric str = 
+        let success, value = Double.TryParse str
+        success
+
+    let charToInt (x:char) =
         Int32.Parse(x.ToString())
 
     let convertToCharArray (str:String) = 
@@ -39,6 +43,8 @@ module Mod10 =
     let GetControlNumber modbase = 
         if(String.IsNullOrWhiteSpace(modbase)) then
             failwith "modbase was null or empty"
+        if(isNumeric modbase = false) then
+            failwith "modbase is not numeric"
 
         let modnum = modbase
                         |> convertToCharArray
@@ -66,6 +72,8 @@ module Mod11 =
     let GetControlNumber modbase = 
         if(String.IsNullOrWhiteSpace(modbase)) then
             failwith "modbase was null or empty"
+        if(isNumeric modbase = false) then
+            failwith "modbase is not numeric"
 
         let weightNumbers = [ 2; 3; 4; 5; 6; 7 ]
 
