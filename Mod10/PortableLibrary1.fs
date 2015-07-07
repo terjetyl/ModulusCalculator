@@ -40,7 +40,7 @@ module Mod10 =
     open System
     open Helper
 
-    let GetControlNumber modbase = 
+    let GetControlNumber (modbase:String) : Int32 = 
         if(String.IsNullOrWhiteSpace(modbase)) then
             failwith "modbase was null or empty"
         if(isNumeric modbase = false) then
@@ -69,7 +69,7 @@ module Mod11 =
     open System
     open Helper
 
-    let GetControlNumber modbase = 
+    let GetControlNumber (modbase:String) : Int32 = 
         if(String.IsNullOrWhiteSpace(modbase)) then
             failwith "modbase was null or empty"
         if(isNumeric modbase = false) then
