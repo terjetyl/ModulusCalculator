@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>ModulusCalculator</id>
+    <version>1.0.2</version>
+    <authors>terjetyl</authors>
+    <owners>terjetyl</owners>
+    <projectUrl>https://github.com/terjetyl/ModulusCalculator</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Calculates Mod10 and Mod11</description>
+    <releaseNotes>Removed dependency on FSharp.Core</releaseNotes>
+    <copyright>ModulusCalculator Copyright 2015</copyright>
+    <tags>Mod10 Mod11 Luhn</tags>
+  </metadata>
+  <files>
+    <file src="Mod10\bin\Release\ModulusCalculator.dll" target="lib\portable-net45+wp80+win+MonoAndroid10+xamarinios10+MonoTouch10\"/>
+  </files>
+</package>
